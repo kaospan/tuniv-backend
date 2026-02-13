@@ -3,7 +3,7 @@ from __future__ import annotations
 import subprocess
 from pathlib import Path
 
-from backend.montage.assembler import Timeline
+from montage.assembler import Timeline
 
 
 def render_timeline(timeline: Timeline, audio_path: Path, output_path: Path) -> None:
@@ -104,3 +104,4 @@ def _run(cmd: list[str]) -> None:
     result = subprocess.run(cmd, capture_output=True, text=True, check=False)
     if result.returncode != 0:
         raise RuntimeError(result.stderr.strip() or "ffmpeg export failed")
+

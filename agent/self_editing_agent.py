@@ -3,8 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, List, Tuple
 
-from backend.montage.assembler import Timeline, TimelineItem
-from backend.providers.mock_provider import MockVideoProvider
+from montage.assembler import Timeline, TimelineItem
+from providers.mock_provider import MockVideoProvider
 
 
 @dataclass
@@ -192,3 +192,4 @@ class SelfEditingAgent:
             "improved": iterations[-1]["total"] > iterations[0]["total"],
             "self_editing_agent": "on",
         }
+

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from backend.core.jobs import UserSession
+from core.jobs import UserSession
 
 
 def session_from_email(email: str | None) -> UserSession:
@@ -13,3 +13,4 @@ def session_from_email(email: str | None) -> UserSession:
     else:
         plan = "free"
     return UserSession(email=clean, plan=plan)
+

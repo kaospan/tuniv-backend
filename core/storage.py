@@ -4,7 +4,7 @@ import shutil
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from backend.core.config import settings
+from core.config import settings
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 STORAGE_DIR = BASE_DIR / "storage"
@@ -32,3 +32,4 @@ def cleanup_expired_jobs(jobs: list[dict]) -> int:
             shutil.rmtree(path, ignore_errors=True)
             removed += 1
     return removed
+

@@ -3,8 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List
 
-from backend.montage.clip_plan import TimelinePlan, TimelineSegment
-from backend.providers.mock_provider import GeneratedClip
+from montage.clip_plan import TimelinePlan, TimelineSegment
+from providers.mock_provider import GeneratedClip
 
 
 @dataclass
@@ -32,3 +32,4 @@ class MontageAssembler:
             transition = "crossfade" if segment.index % 4 == 0 else "cut"
             items.append(TimelineItem(segment=segment, clip=clip, transition=transition))
         return Timeline(items=items)
+
