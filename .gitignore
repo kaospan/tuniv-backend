@@ -1,3 +1,20 @@
+
+# Environment
+.env
+.env.*
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# Build artifacts
+dist/
+build/
+coverage/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
